@@ -8,7 +8,7 @@ var url = "mongodb+srv://zoushilu3136:zoushilu3136@cluster0.h5nhu.mongodb.net/my
 router.get('/', (req, res, next) => {
     MongoClient.connect(url, function(err, db) {
         if (err) throw err;
-        var dbo = db.db("mongodb+srv://zoushilu3136:zoushilu3136@cluster0.h5nhu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+        var dbo = db.db("getxpro");
         dbo.collection("collection1").find({}).toArray(function(err, result) {
             if (err) throw err;
             console.log('Mongo data coming in hot')
